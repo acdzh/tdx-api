@@ -27,4 +27,6 @@ git clone -b skill --single-branch https://github.com/acdzh/tdx-api.git
 
 ## 使用说明
 
-安装后，在需要查询、调试或编写 TDX 股票数据 HTTP API 调用示例时使用该 skill。
+安装后，在需要查询、调试或编写 TDX A 股股票数据 HTTP API 调用示例时使用该 skill。
+
+不建议把它用于基金净值、基金档案、债券、期货或宏观经济查询。

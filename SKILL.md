@@ -1,37 +1,46 @@
 ---
 name: tdx-api-usage
-description: 当用户需要查询、调试或编写对接 TDX 股票数据 HTTP API 的代码、脚本或调用示例时使用，并优先通过一次性 Python 脚本完成数据获取与验证。
-keywords: "akshare, finance, investment, data analysis, stock, fund, futures, macro economy, indices, bonds, option, fx, bank, energy, interest rate, spot, currency, 股票, 基金, 期货, 宏观经济, 指数, 债券, 期权, 外汇, 银行, 能源, 利率, 现货, 数字货币, 大A, 港股, 美股, 技术分析, 基本面分析, 消息面, K线, 均线, MACD, RSI, KDJ, 布林带, 量价分析, 财务分析, 估值, PE, PB, ROE, 行业分析, 板块, 概念股, 热门股, 龙虎榜, 资金流向, 机构评级, 研报, 涨跌幅, 市盈率, 市净率, 净利润, 营收, 毛利率, GDP, CPI, PMI, LPR, 上证指数, 沪深300, 创业板, 科创板"
+description: 当用户需要查询、调试或编写对接 TDX A 股股票数据 HTTP API 的代码、脚本或调用示例时使用，并优先通过一次性 Python 脚本完成数据获取与验证。
+keywords: "tdx, tdx api, stock api, quote api, kline api, search api, stock-info api, batch-quote api, 股票, A股, 沪市, 深市, 北交所, 实时行情, 五档行情, K线, 分时, 逐笔成交, 个股信息, 股票代码, 指数, 交易日, 收益区间, 通达信"
 ---
 
 # TDX API Usage
 
-按本 skill 对接 TDX 股票数据 API。目标是稳定地拿到数据、解释字段，并给出可直接执行的调用示例。
+按本 skill 对接 TDX A 股股票数据 API。目标是稳定地拿到数据、解释字段，并给出可直接执行的调用示例。
 
 ## 何时使用
 
-- 用户要查询或调试 `quote`、`kline`、`minute`、`trade`、`search`、`stock-info`、`codes`、`index`、`workday`、`income` 等 HTTP API。
+- 用户要查询或调试 `quote`、`kline`、`minute`、`trade`、`trade-history`、`search`、`stock-info`、`codes`、`index`、`workday`、`income` 等股票 HTTP API。
 - 用户要生成 Python、curl、JavaScript 等调用示例。
 - 用户要核对接口参数、响应结构、单位换算或错误处理方式。
+
+## 不适用场景
+
+- 不用于基金净值、基金档案、债券、期货、宏观经济、外汇、数字货币等非股票场景。
+- 当用户只给出六码纯数字代码时，不要默认它一定是股票代码；例如 `001309` 既可能被用户当作基金代码，也会被本 API 解析为股票 `德明利`。
+- 如果用户明确要查基金，应该改用基金数据源，而不是继续调用本 skill 中的股票接口。
 
 ## 硬性约束
 
 - host 固定为 `tdx.acdzh.xyz`。
 - 若用户没有额外指定协议或端口，示例默认使用 `http://tdx.acdzh.xyz` 作为 base URL。
+- 命令行脚本或 Python 客户端访问业务接口时，建议显式携带 `User-Agent` 请求头；实测 `/api/search`、`/api/quote`、`/api/kline` 等接口在缺少常见浏览器式请求头时可能返回 `403`。
 - 不要把一次性抓数脚本写进仓库。
 - 如果需要写一次性的 Python 脚本，必须先生成 UUID，并把脚本写入系统临时目录，文件名使用该 UUID。
-- 返回价格默认单位为 `厘`，展示给用户时通常需要换算为 `元`，即 `value / 1000`。
-- 返回成交量默认单位为 `手`，若需要换算成 `股`，使用 `value * 100`。
+- `quote`、`kline`、`minute`、`trade`、`trade-history`、`index` 中的大多数价格字段默认单位为 `厘`，展示给用户时通常需要换算为 `元`，即 `value / 1000`。
+- `income` 接口返回的价格字段实测已经是 `元`，不要再次除以 `1000`。
+- 返回成交量默认单位通常为 `手`，若需要换算成 `股`，使用 `value * 100`。
 
 ## 推荐流程
 
-1. 明确用户要的接口、股票代码、日期、周期和返回格式。
-2. 若股票代码不明确，优先调用 `/api/search`。
-3. 若需要检查服务可用性，先调用 `/api/server-status`。
-4. 组装请求 URL 或请求体，优先给出最小可执行示例。
-5. 读取统一响应结构中的 `code`、`message`、`data`。
-6. 对价格、成交量、成交额做必要单位换算，并在结果里显式说明。
-7. 若 `code != 0` 或列表为空，明确区分“接口报错”和“该日期无数据”。
+1. 明确用户要的接口、资产类型、股票代码、日期、周期和返回格式。
+2. 若用户只给出六码纯数字代码，先确认这是股票还是基金；未确认前不要直接调用股票接口。
+3. 若股票代码不明确，优先调用 `/api/search`。
+4. 若需要检查服务可用性，先调用 `/api/server-status`。
+5. 组装请求 URL 或请求体，优先给出最小可执行示例，并在示例里带上 `User-Agent`。
+6. 读取统一响应结构中的 `code`、`message`、`data`。
+7. 对价格、成交量、成交额做必要单位换算，并在结果里显式说明具体接口的单位前提。
+8. 若 `code != 0` 或列表为空，明确区分“接口报错”和“该日期无数据”。
 
 ## 一次性 Python 脚本规则
 
@@ -66,10 +75,12 @@ Python 示例模板：
 import requests
 
 BASE_URL = "http://tdx.acdzh.xyz"
+HEADERS = {"User-Agent": "Mozilla/5.0"}
 
 resp = requests.get(
     f"{BASE_URL}/api/quote",
     params={"code": "000001"},
+    headers=HEADERS,
     timeout=10,
 )
 resp.raise_for_status()
@@ -102,6 +113,7 @@ print({
 - `code == 0` 视为成功。
 - `code != 0` 时，优先向用户透出 `message`。
 - 只有在 `code == 0` 的前提下再解析 `data`。
+- 业务接口可能返回 HTTP `403`；若出现这种情况，先检查是否缺少 `User-Agent` 等常见请求头，而不是立即认定服务不可用。
 
 ## 常用接口选择建议
 
@@ -124,11 +136,13 @@ print({
 
 ## 易错点
 
-- `/api/minute` 指定日期可能返回空列表；空列表不等于接口失败。
+- `/api/minute` 和 `/api/trade` 在指定日期无数据时，实测返回 `{"Count":0,"List":null}`；这不等于接口失败。
 - `/api/trade-history` 单次最多返回 2000 条，需要通过 `start` 和 `count` 分页。
 - `/api/kline-all` 数据量可能很大，优先带 `limit`。
 - 当用户只给股票名称时，不要直接猜代码，先调用 `/api/search`。
+- 当用户只给六码纯数字代码时，不要默认它一定是股票；先确认资产类型，避免把基金代码误判成股票代码。
 - 当用户关心“前复权还是原始数据”时，不要只用 `/api/kline`，要改用显式数据源接口。
+- `/api/income` 的价格字段实测已经是 `元`，不要沿用 `quote`/`kline` 的 `厘 -> 元` 规则。
 
 ## 输出要求
 
