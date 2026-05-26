@@ -33,4 +33,6 @@ git clone -b skill --single-branch https://github.com/acdzh/tdx-api.git
 
 默认输出应优先采用结构化数据摘要，而不是直接抛出大段原始接口响应。
 
+`SKILL.md` 已内置常用接口的摘要模板与示例，便于稳定输出适合后续分析与决策的数据结果。
+
 不建议把它用于基金净值、基金档案、债券、期货或宏观经济查询。
