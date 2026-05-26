@@ -58,6 +58,24 @@
 | 通达信原始全量 K 线 | GET | `/api/kline-all/tdx` | 支持分钟、小时、日、周、月、季、年 |
 | 同花顺前复权全量 K 线 | GET | `/api/kline-all/ths` | 只支持 `day` / `week` / `month` |
 
+## 任务到接口选择矩阵
+
+| 任务 | 首选接口 | 可补充接口 | 关键提醒 |
+|---|---|---|---|
+| 确认股票代码或消歧 | `GET /api/search` | `GET /api/codes` | 关键词过泛时结果会较多；六码纯数字代码先确认是否其实是基金 |
+| 查看单只股票当前实时情况 | `GET /api/quote` | `GET /api/stock-info` | 实时行情价格字段通常是厘，展示前换算为元 |
+| 一次性看单股概览 | `GET /api/stock-info` | `GET /api/quote`, `GET /api/kline` | 聚合接口内容较多，先提炼关键块，不要原样展开 |
+| 查看单只股票近期日线走势 | `GET /api/kline` | `GET /api/kline-all/tdx`, `GET /api/kline-all/ths` | 若用户关心复权或完整历史，优先改用显式数据源接口 |
+| 查看完整历史 K 线 | `GET /api/kline-all/tdx` | `GET /api/kline-all/ths` | `tdx` 是原始口径，`ths` 是前复权口径；必须显式说明 |
+| 查看盘中分时走势 | `GET /api/minute` | `GET /api/trade` | 指定日期无数据时可能返回 `Count=0, List=null`，不等于接口失败 |
+| 查看当日逐笔成交 | `GET /api/trade` | `GET /api/trade-history` | 适合看当日成交活跃度；若要更完整历史逐笔，改用 `trade-history` |
+| 查看历史逐笔成交明细 | `GET /api/trade-history` | `GET /api/trade` | 单次最多 2000 条，需要分页；不要一次性原样输出大量明细 |
+| 比较多只股票实时表现 | `POST /api/batch-quote` | `GET /api/quote` | 先统一单位和时间口径，再做并列比较 |
+| 查看指数阶段表现 | `GET /api/index` | `GET /api/kline` | 指数字段里可能包含上涨/下跌家数，适合补充市场宽度信息 |
+| 判断某天是否交易日 | `GET /api/workday` | 无 | 支持 `YYYYMMDD` 和 `YYYY-MM-DD` 两种日期格式 |
+| 计算指定起点后的区间收益 | `GET /api/income` | `GET /api/kline` | `income` 价格字段实测已是元，不要重复除以 `1000` |
+| 获取股票池或全市场代码列表 | `GET /api/codes` | `GET /api/search` | 适合先拿范围，再做批量筛选或二次查询 |
+
 ## 单位换算
 
 - `quote` / `kline` / `minute` / `trade` / `trade-history` / `index` 的大多数价格字段：`厘 / 1000 = 元`
