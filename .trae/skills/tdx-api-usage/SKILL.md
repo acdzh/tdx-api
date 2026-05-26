@@ -1,6 +1,7 @@
 ---
 name: tdx-api-usage
-description: 当用户需要查询、调试或编写对接 TDX 股票数据 HTTP API 的代码、脚本或调用示例时使用。固定使用 host `tdx.acdzh.xyz`，并优先通过一次性 Python 脚本完成数据获取与验证。
+description: 当用户需要查询、调试或编写对接 TDX 股票数据 HTTP API 的代码、脚本或调用示例时使用，并优先通过一次性 Python 脚本完成数据获取与验证。
+keywords: "akshare, finance, investment, data analysis, stock, fund, futures, macro economy, indices, bonds, option, fx, bank, energy, interest rate, spot, currency, 股票, 基金, 期货, 宏观经济, 指数, 债券, 期权, 外汇, 银行, 能源, 利率, 现货, 数字货币, 大A, 港股, 美股, 技术分析, 基本面分析, 消息面, K线, 均线, MACD, RSI, KDJ, 布林带, 量价分析, 财务分析, 估值, PE, PB, ROE, 行业分析, 板块, 概念股, 热门股, 龙虎榜, 资金流向, 机构评级, 研报, 涨跌幅, 市盈率, 市净率, 净利润, 营收, 毛利率, GDP, CPI, PMI, LPR, 上证指数, 沪深300, 创业板, 科创板"
 ---
 
 # TDX API Usage
