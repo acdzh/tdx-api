@@ -1,0 +1,373 @@
+references/api-kline-all-tdx.md
+  55cfea88a73160d5 1-226 gitai:{"mixed_line_ranges":[{"Single":226}],"operations":[{"operation_id":"6a20e3af53317ff6ab8b12d5","tool_type":"agent","tool_id":"Edit","line_ranges":[{"Range":[1,226]}]}]}
+references/api-index.md
+  55cfea88a73160d5 1-180 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a20e3af53317ff6ab8b12d5","tool_type":"agent","tool_id":"Edit","line_ranges":[{"Range":[1,180]}]}]}
+references/api-income.md
+  55cfea88a73160d5 1-235 gitai:{"mixed_line_ranges":[{"Single":235}],"operations":[{"operation_id":"6a20e3af53317ff6ab8b12d5","tool_type":"agent","tool_id":"Edit","line_ranges":[{"Range":[1,235]}]}]}
+references/api-minute.md
+  55cfea88a73160d5 1-142 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a20e3af53317ff6ab8b12d5","tool_type":"agent","tool_id":"Edit","line_ranges":[{"Range":[1,142]}]}]}
+references/api-quick-reference.md
+  55cfea88a73160d5 5-29 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a20e3af53317ff6ab8b12d5","tool_type":"agent","tool_id":"Edit","line_ranges":[{"Range":[5,29]}]}]}
+references/api-tasks-pull-kline.md
+  55cfea88a73160d5 1-118 gitai:{"mixed_line_ranges":[{"Single":118}],"operations":[{"operation_id":"6a20e3af53317ff6ab8b12d5","tool_type":"agent","tool_id":"Edit","line_ranges":[{"Range":[1,118]}]}]}
+references/api-kline-all-ths.md
+  55cfea88a73160d5 1-213 gitai:{"mixed_line_ranges":[{"Single":213}],"operations":[{"operation_id":"6a20e3af53317ff6ab8b12d5","tool_type":"agent","tool_id":"Edit","line_ranges":[{"Range":[1,213]}]}]}
+references/api-batch-quote.md
+  55cfea88a73160d5 1-190 gitai:{"mixed_line_ranges":[{"Single":190}],"operations":[{"operation_id":"6a20e3af53317ff6ab8b12d5","tool_type":"agent","tool_id":"Edit","line_ranges":[{"Range":[1,190]}]}]}
+references/api-tasks-pull-trade.md
+  55cfea88a73160d5 1-76 gitai:{"mixed_line_ranges":[{"Single":21},{"Single":76}],"operations":[{"operation_id":"6a20e3af53317ff6ab8b12d5","tool_type":"agent","tool_id":"Edit","line_ranges":[{"Range":[1,76]}]}]}
+references/api-stock-info.md
+  55cfea88a73160d5 1-96 gitai:{"mixed_line_ranges":[{"Single":42}],"operations":[{"operation_id":"6a20e3af53317ff6ab8b12d5","tool_type":"agent","tool_id":"Edit","line_ranges":[{"Range":[1,96]}]}]}
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "9ddb6ff07b7632874268ccca01ed42c58c8d4b4c",
+  "prompts": {
+    "55cfea88a73160d5": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a1599b281150c6f487742e2",
+        "model": "c_o_new_thinking__dev"
+      },
+      "human_author": "zhukuan <zhukuan.cade@bytedance.com>",
+      "messages": [],
+      "total_additions": 1360,
+      "total_deletions": 6,
+      "accepted_lines": 1350,
+      "overriden_lines": 8
+    }
+  },
+  "attestation_metadata": {
+    "references/api-batch-quote.md": [
+      {
+        "hash": "55cfea88a73160d5",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              190
+            ]
+          }
+        ],
+        "mixed_line_ranges": [
+          {
+            "Single": 190
+          }
+        ],
+        "operations": [
+          {
+            "operation_id": "6a20e3af53317ff6ab8b12d5",
+            "tool_type": "agent",
+            "tool_id": "Edit",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  190
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references/api-income.md": [
+      {
+        "hash": "55cfea88a73160d5",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              235
+            ]
+          }
+        ],
+        "mixed_line_ranges": [
+          {
+            "Single": 235
+          }
+        ],
+        "operations": [
+          {
+            "operation_id": "6a20e3af53317ff6ab8b12d5",
+            "tool_type": "agent",
+            "tool_id": "Edit",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  235
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references/api-index.md": [
+      {
+        "hash": "55cfea88a73160d5",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              180
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a20e3af53317ff6ab8b12d5",
+            "tool_type": "agent",
+            "tool_id": "Edit",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  180
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references/api-kline-all-tdx.md": [
+      {
+        "hash": "55cfea88a73160d5",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              226
+            ]
+          }
+        ],
+        "mixed_line_ranges": [
+          {
+            "Single": 226
+          }
+        ],
+        "operations": [
+          {
+            "operation_id": "6a20e3af53317ff6ab8b12d5",
+            "tool_type": "agent",
+            "tool_id": "Edit",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  226
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references/api-kline-all-ths.md": [
+      {
+        "hash": "55cfea88a73160d5",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              213
+            ]
+          }
+        ],
+        "mixed_line_ranges": [
+          {
+            "Single": 213
+          }
+        ],
+        "operations": [
+          {
+            "operation_id": "6a20e3af53317ff6ab8b12d5",
+            "tool_type": "agent",
+            "tool_id": "Edit",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  213
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references/api-minute.md": [
+      {
+        "hash": "55cfea88a73160d5",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              142
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a20e3af53317ff6ab8b12d5",
+            "tool_type": "agent",
+            "tool_id": "Edit",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  142
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references/api-quick-reference.md": [
+      {
+        "hash": "55cfea88a73160d5",
+        "line_ranges": [
+          {
+            "Range": [
+              5,
+              29
+            ]
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a20e3af53317ff6ab8b12d5",
+            "tool_type": "agent",
+            "tool_id": "Edit",
+            "line_ranges": [
+              {
+                "Range": [
+                  5,
+                  29
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references/api-stock-info.md": [
+      {
+        "hash": "55cfea88a73160d5",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              96
+            ]
+          }
+        ],
+        "mixed_line_ranges": [
+          {
+            "Single": 42
+          }
+        ],
+        "operations": [
+          {
+            "operation_id": "6a20e3af53317ff6ab8b12d5",
+            "tool_type": "agent",
+            "tool_id": "Edit",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  96
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references/api-tasks-pull-kline.md": [
+      {
+        "hash": "55cfea88a73160d5",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              118
+            ]
+          }
+        ],
+        "mixed_line_ranges": [
+          {
+            "Single": 118
+          }
+        ],
+        "operations": [
+          {
+            "operation_id": "6a20e3af53317ff6ab8b12d5",
+            "tool_type": "agent",
+            "tool_id": "Edit",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  118
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references/api-tasks-pull-trade.md": [
+      {
+        "hash": "55cfea88a73160d5",
+        "line_ranges": [
+          {
+            "Range": [
+              1,
+              76
+            ]
+          }
+        ],
+        "mixed_line_ranges": [
+          {
+            "Single": 21
+          },
+          {
+            "Single": 76
+          }
+        ],
+        "operations": [
+          {
+            "operation_id": "6a20e3af53317ff6ab8b12d5",
+            "tool_type": "agent",
+            "tool_id": "Edit",
+            "line_ranges": [
+              {
+                "Range": [
+                  1,
+                  76
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "remote_transcripts": {
+    "55cfea88a73160d5": {
+      "tool": "trae",
+      "conversation_id": "6a1599b281150c6f487742e2",
+      "session_id": "6a1599b281150c6f487742e2",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    }
+  }
+}
