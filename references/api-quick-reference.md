@@ -2,6 +2,31 @@
 
 本文件是 `tdx-api-usage` skill 的速查表，按常见股票任务给出推荐接口、关键参数和注意事项。
 
+## 接口详细文档目录
+
+每个接口均有独立的详细参考文件，包含参数说明、返回格式、返回示例和代码示例：
+
+| 接口 | 文件 | 说明 |
+|---|---|---|
+| GET /api/server-status | [api-server-status.md](./api-server-status.md) | 服务状态检查 |
+| GET /api/quote | [api-quote.md](./api-quote.md) | 五档实时行情 |
+| GET /api/kline | [api-kline.md](./api-kline.md) | K 线数据 |
+| GET /api/minute | [api-minute.md](./api-minute.md) | 分时数据 |
+| GET /api/trade | [api-trade.md](./api-trade.md) | 当日逐笔成交 |
+| GET /api/trade-history | [api-trade-history.md](./api-trade-history.md) | 历史逐笔成交 |
+| GET /api/search | [api-search.md](./api-search.md) | 股票搜索 |
+| GET /api/stock-info | [api-stock-info.md](./api-stock-info.md) | 股票概览 |
+| GET /api/codes | [api-codes.md](./api-codes.md) | 股票列表 |
+| GET /api/index | [api-index.md](./api-index.md) | 指数 K 线 |
+| GET /api/workday | [api-workday.md](./api-workday.md) | 交易日查询 |
+| GET /api/income | [api-income.md](./api-income.md) | 区间收益 |
+| POST /api/batch-quote | [api-batch-quote.md](./api-batch-quote.md) | 批量行情 |
+| GET /api/kline-all/tdx | [api-kline-all-tdx.md](./api-kline-all-tdx.md) | 通达信全量 K 线（不复权） |
+| GET /api/kline-all/ths | [api-kline-all-ths.md](./api-kline-all-ths.md) | 同花顺全量 K 线（前复权） |
+| POST /api/tasks/pull-kline | [api-tasks-pull-kline.md](./api-tasks-pull-kline.md) | 创建 K 线拉取任务 |
+| POST /api/tasks/pull-trade | [api-tasks-pull-trade.md](./api-tasks-pull-trade.md) | 创建成交拉取任务 |
+| POST /api/tasks/{task_id}/cancel | [api-tasks-cancel.md](./api-tasks-cancel.md) | 取消任务 |
+
 ## 适用范围
 
 - 本速查表面向 TDX A 股股票 API，不覆盖基金净值、基金档案、债券、期货、宏观经济等场景。
