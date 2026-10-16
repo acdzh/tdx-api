@@ -167,7 +167,7 @@
 ```python
 import requests
 
-url = "http://tdx.acdzh.xyz/api/index"
+url = "http://tdx.acdzh.com/api/index"
 headers = {"User-Agent": "Mozilla/5.0"}
 params = {"code": "sh000001", "type": "day"}
 
@@ -191,16 +191,16 @@ if data["code"] == 0:
 
 ```bash
 # 上证指数日K线
-xh GET "http://tdx.acdzh.xyz/api/index?code=sh000001&type=day" User-Agent:"Mozilla/5.0"
+xh GET "http://tdx.acdzh.com/api/index?code=sh000001&type=day" User-Agent:"Mozilla/5.0"
 
 # 上证指数周K线
-xh GET "http://tdx.acdzh.xyz/api/index?code=sh000001&type=week" User-Agent:"Mozilla/5.0"
+xh GET "http://tdx.acdzh.com/api/index?code=sh000001&type=week" User-Agent:"Mozilla/5.0"
 ```
 
 ### Shell (curl)
 
 ```bash
-curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.xyz/api/index?code=sh000001&type=day"
+curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.com/api/index?code=sh000001&type=day"
 ```
 
 ## 注意事项

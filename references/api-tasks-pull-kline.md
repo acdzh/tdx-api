@@ -63,7 +63,7 @@
 ```python
 import requests
 
-url = "http://tdx.acdzh.xyz/api/tasks/pull-kline"
+url = "http://tdx.acdzh.com/api/tasks/pull-kline"
 headers = {
     "User-Agent": "Mozilla/5.0",
     "Content-Type": "application/json"
@@ -91,13 +91,13 @@ else:
 
 ```bash
 echo '{"codes":["000001","600519"],"tables":["day","week"],"dir":"/data/kline","limit":1000}' | \
-  xh POST "http://tdx.acdzh.xyz/api/tasks/pull-kline" User-Agent:"Mozilla/5.0" Content-Type:"application/json"
+  xh POST "http://tdx.acdzh.com/api/tasks/pull-kline" User-Agent:"Mozilla/5.0" Content-Type:"application/json"
 ```
 
 ### Shell (curl)
 
 ```bash
-curl -X POST "http://tdx.acdzh.xyz/api/tasks/pull-kline" \
+curl -X POST "http://tdx.acdzh.com/api/tasks/pull-kline" \
   -H "User-Agent: Mozilla/5.0" \
   -H "Content-Type: application/json" \
   -d '{

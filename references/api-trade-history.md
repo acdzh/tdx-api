@@ -111,7 +111,7 @@
 ```python
 import requests
 
-url = "http://tdx.acdzh.xyz/api/trade-history"
+url = "http://tdx.acdzh.com/api/trade-history"
 headers = {"User-Agent": "Mozilla/5.0"}
 
 # 分页获取全部成交数据
@@ -159,16 +159,16 @@ for trade in all_trades[:5]:
 
 ```bash
 # 获取前 5 条
-xh GET "http://tdx.acdzh.xyz/api/trade-history?code=000001&date=20260602&start=0&count=5" User-Agent:"Mozilla/5.0"
+xh GET "http://tdx.acdzh.com/api/trade-history?code=000001&date=20260602&start=0&count=5" User-Agent:"Mozilla/5.0"
 
 # 获取第 2000-4000 条
-xh GET "http://tdx.acdzh.xyz/api/trade-history?code=000001&date=20260602&start=2000&count=2000" User-Agent:"Mozilla/5.0"
+xh GET "http://tdx.acdzh.com/api/trade-history?code=000001&date=20260602&start=2000&count=2000" User-Agent:"Mozilla/5.0"
 ```
 
 ### Shell (curl)
 
 ```bash
-curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.xyz/api/trade-history?code=000001&date=20260602&start=0&count=2000"
+curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.com/api/trade-history?code=000001&date=20260602&start=0&count=2000"
 ```
 
 ## 注意事项

@@ -185,7 +185,7 @@
 ```python
 import requests
 
-url = "http://tdx.acdzh.xyz/api/income"
+url = "http://tdx.acdzh.com/api/income"
 headers = {"User-Agent": "Mozilla/5.0"}
 params = {
     "code": "000001",
@@ -218,13 +218,13 @@ if data["code"] == 0:
 ### Shell (xh)
 
 ```bash
-xh GET "http://tdx.acdzh.xyz/api/income?code=000001&start_date=20260501&days=5,10,20" User-Agent:"Mozilla/5.0"
+xh GET "http://tdx.acdzh.com/api/income?code=000001&start_date=20260501&days=5,10,20" User-Agent:"Mozilla/5.0"
 ```
 
 ### Shell (curl)
 
 ```bash
-curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.xyz/api/income?code=000001&start_date=20260501&days=5,10,20"
+curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.com/api/income?code=000001&start_date=20260501&days=5,10,20"
 ```
 
 ## 注意事项

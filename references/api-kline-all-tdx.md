@@ -195,7 +195,7 @@
 ```python
 import requests
 
-url = "http://tdx.acdzh.xyz/api/kline-all/tdx"
+url = "http://tdx.acdzh.com/api/kline-all/tdx"
 headers = {"User-Agent": "Mozilla/5.0"}
 params = {"code": "000001", "type": "day"}
 
@@ -230,16 +230,16 @@ if data["code"] == 0:
 
 ```bash
 # 日K线全量
-xh --timeout=30 GET "http://tdx.acdzh.xyz/api/kline-all/tdx?code=000001&type=day" User-Agent:"Mozilla/5.0"
+xh --timeout=30 GET "http://tdx.acdzh.com/api/kline-all/tdx?code=000001&type=day" User-Agent:"Mozilla/5.0"
 
 # 30分钟K线全量
-xh --timeout=30 GET "http://tdx.acdzh.xyz/api/kline-all/tdx?code=000001&type=minute30" User-Agent:"Mozilla/5.0"
+xh --timeout=30 GET "http://tdx.acdzh.com/api/kline-all/tdx?code=000001&type=minute30" User-Agent:"Mozilla/5.0"
 ```
 
 ### Shell (curl)
 
 ```bash
-curl --max-time 30 -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.xyz/api/kline-all/tdx?code=000001&type=day"
+curl --max-time 30 -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.com/api/kline-all/tdx?code=000001&type=day"
 ```
 
 ## 注意事项

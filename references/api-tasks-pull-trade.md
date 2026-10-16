@@ -61,7 +61,7 @@
 ```python
 import requests
 
-url = "http://tdx.acdzh.xyz/api/tasks/pull-trade"
+url = "http://tdx.acdzh.com/api/tasks/pull-trade"
 headers = {
     "User-Agent": "Mozilla/5.0",
     "Content-Type": "application/json"
@@ -88,13 +88,13 @@ else:
 
 ```bash
 echo '{"code":"000001","dir":"/data/trade","start_year":2024,"end_year":2026}' | \
-  xh POST "http://tdx.acdzh.xyz/api/tasks/pull-trade" User-Agent:"Mozilla/5.0" Content-Type:"application/json"
+  xh POST "http://tdx.acdzh.com/api/tasks/pull-trade" User-Agent:"Mozilla/5.0" Content-Type:"application/json"
 ```
 
 ### Shell (curl)
 
 ```bash
-curl -X POST "http://tdx.acdzh.xyz/api/tasks/pull-trade" \
+curl -X POST "http://tdx.acdzh.com/api/tasks/pull-trade" \
   -H "User-Agent: Mozilla/5.0" \
   -H "Content-Type: application/json" \
   -d '{

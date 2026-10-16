@@ -145,7 +145,7 @@
 ```python
 import requests
 
-url = "http://tdx.acdzh.xyz/api/workday"
+url = "http://tdx.acdzh.com/api/workday"
 headers = {"User-Agent": "Mozilla/5.0"}
 params = {"date": "20260520", "count": 5}
 
@@ -175,16 +175,16 @@ if data["code"] == 0:
 
 ```bash
 # YYYYMMDD 格式
-xh GET "http://tdx.acdzh.xyz/api/workday?date=20260520&count=3" User-Agent:"Mozilla/5.0"
+xh GET "http://tdx.acdzh.com/api/workday?date=20260520&count=3" User-Agent:"Mozilla/5.0"
 
 # YYYY-MM-DD 格式
-xh GET "http://tdx.acdzh.xyz/api/workday?date=2026-06-03&count=5" User-Agent:"Mozilla/5.0"
+xh GET "http://tdx.acdzh.com/api/workday?date=2026-06-03&count=5" User-Agent:"Mozilla/5.0"
 ```
 
 ### Shell (curl)
 
 ```bash
-curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.xyz/api/workday?date=20260520&count=3"
+curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.com/api/workday?date=20260520&count=3"
 ```
 
 ## 注意事项

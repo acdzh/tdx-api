@@ -77,7 +77,7 @@
 ```python
 import requests
 
-url = "http://tdx.acdzh.xyz/api/search"
+url = "http://tdx.acdzh.com/api/search"
 headers = {"User-Agent": "Mozilla/5.0"}
 params = {"keyword": "平安"}
 
@@ -95,13 +95,13 @@ if data["code"] == 0:
 ### Shell (xh)
 
 ```bash
-xh GET "http://tdx.acdzh.xyz/api/search?keyword=平安" User-Agent:"Mozilla/5.0"
+xh GET "http://tdx.acdzh.com/api/search?keyword=平安" User-Agent:"Mozilla/5.0"
 ```
 
 ### Shell (curl)
 
 ```bash
-curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.xyz/api/search?keyword=%E5%B9%B3%E5%AE%89"
+curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.com/api/search?keyword=%E5%B9%B3%E5%AE%89"
 ```
 
 ## 注意事项

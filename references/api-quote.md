@@ -154,7 +154,7 @@
 ```python
 import requests
 
-url = "http://tdx.acdzh.xyz/api/quote"
+url = "http://tdx.acdzh.com/api/quote"
 headers = {"User-Agent": "Mozilla/5.0"}
 params = {"code": "000001"}
 
@@ -189,16 +189,16 @@ if data["code"] == 0:
 
 ```bash
 # 单只股票
-xh GET "http://tdx.acdzh.xyz/api/quote?code=000001" User-Agent:"Mozilla/5.0"
+xh GET "http://tdx.acdzh.com/api/quote?code=000001" User-Agent:"Mozilla/5.0"
 
 # 多只股票
-xh GET "http://tdx.acdzh.xyz/api/quote?code=000001,600519" User-Agent:"Mozilla/5.0"
+xh GET "http://tdx.acdzh.com/api/quote?code=000001,600519" User-Agent:"Mozilla/5.0"
 ```
 
 ### Shell (curl)
 
 ```bash
-curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.xyz/api/quote?code=000001,600519"
+curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.com/api/quote?code=000001,600519"
 ```
 
 ## 注意事项

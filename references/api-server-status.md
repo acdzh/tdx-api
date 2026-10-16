@@ -61,7 +61,7 @@
 ```python
 import requests
 
-url = "http://tdx.acdzh.xyz/api/server-status"
+url = "http://tdx.acdzh.com/api/server-status"
 headers = {"User-Agent": "Mozilla/5.0"}
 
 response = requests.get(url, headers=headers)
@@ -79,13 +79,13 @@ else:
 ### Shell (xh)
 
 ```bash
-xh GET "http://tdx.acdzh.xyz/api/server-status" User-Agent:"Mozilla/5.0"
+xh GET "http://tdx.acdzh.com/api/server-status" User-Agent:"Mozilla/5.0"
 ```
 
 ### Shell (curl)
 
 ```bash
-curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.xyz/api/server-status"
+curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.com/api/server-status"
 ```
 
 ## 使用场景

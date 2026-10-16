@@ -219,7 +219,7 @@
 ```python
 import requests
 
-url = "http://tdx.acdzh.xyz/api/kline"
+url = "http://tdx.acdzh.com/api/kline"
 headers = {"User-Agent": "Mozilla/5.0"}
 params = {"code": "000001", "type": "day"}
 
@@ -244,19 +244,19 @@ if data["code"] == 0:
 
 ```bash
 # 日 K 线
-xh GET "http://tdx.acdzh.xyz/api/kline?code=000001&type=day" User-Agent:"Mozilla/5.0"
+xh GET "http://tdx.acdzh.com/api/kline?code=000001&type=day" User-Agent:"Mozilla/5.0"
 
 # 周 K 线
-xh GET "http://tdx.acdzh.xyz/api/kline?code=000001&type=week" User-Agent:"Mozilla/5.0"
+xh GET "http://tdx.acdzh.com/api/kline?code=000001&type=week" User-Agent:"Mozilla/5.0"
 
 # 30分钟 K 线
-xh GET "http://tdx.acdzh.xyz/api/kline?code=000001&type=minute30" User-Agent:"Mozilla/5.0"
+xh GET "http://tdx.acdzh.com/api/kline?code=000001&type=minute30" User-Agent:"Mozilla/5.0"
 ```
 
 ### Shell (curl)
 
 ```bash
-curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.xyz/api/kline?code=000001&type=day"
+curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.com/api/kline?code=000001&type=day"
 ```
 
 ## 注意事项

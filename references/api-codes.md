@@ -123,7 +123,7 @@
 ```python
 import requests
 
-url = "http://tdx.acdzh.xyz/api/codes"
+url = "http://tdx.acdzh.com/api/codes"
 headers = {"User-Agent": "Mozilla/5.0"}
 params = {"exchange": "all"}
 
@@ -149,16 +149,16 @@ if data["code"] == 0:
 
 ```bash
 # 深圳
-xh GET "http://tdx.acdzh.xyz/api/codes?exchange=sz" User-Agent:"Mozilla/5.0"
+xh GET "http://tdx.acdzh.com/api/codes?exchange=sz" User-Agent:"Mozilla/5.0"
 
 # 全部
-xh GET "http://tdx.acdzh.xyz/api/codes?exchange=all" User-Agent:"Mozilla/5.0"
+xh GET "http://tdx.acdzh.com/api/codes?exchange=all" User-Agent:"Mozilla/5.0"
 ```
 
 ### Shell (curl)
 
 ```bash
-curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.xyz/api/codes?exchange=all"
+curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.com/api/codes?exchange=all"
 ```
 
 ## 注意事项

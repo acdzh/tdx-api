@@ -161,7 +161,7 @@
 ```python
 import requests
 
-url = "http://tdx.acdzh.xyz/api/kline-all/ths"
+url = "http://tdx.acdzh.com/api/kline-all/ths"
 headers = {"User-Agent": "Mozilla/5.0"}
 params = {"code": "000001", "type": "day"}
 
@@ -188,13 +188,13 @@ if data["code"] == 0:
 ### Shell (xh)
 
 ```bash
-xh --timeout=15 GET "http://tdx.acdzh.xyz/api/kline-all/ths?code=000001&type=day" User-Agent:"Mozilla/5.0"
+xh --timeout=15 GET "http://tdx.acdzh.com/api/kline-all/ths?code=000001&type=day" User-Agent:"Mozilla/5.0"
 ```
 
 ### Shell (curl)
 
 ```bash
-curl --max-time 15 -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.xyz/api/kline-all/ths?code=000001&type=day"
+curl --max-time 15 -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.com/api/kline-all/ths?code=000001&type=day"
 ```
 
 ## 与 /api/kline-all/tdx 的对比

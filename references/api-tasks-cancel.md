@@ -49,7 +49,7 @@
 import requests
 
 task_id = "abc123-def456-..."
-url = f"http://tdx.acdzh.xyz/api/tasks/{task_id}/cancel"
+url = f"http://tdx.acdzh.com/api/tasks/{task_id}/cancel"
 headers = {"User-Agent": "Mozilla/5.0"}
 
 response = requests.post(url, headers=headers)
@@ -64,13 +64,13 @@ else:
 ### Shell (xh)
 
 ```bash
-xh POST "http://tdx.acdzh.xyz/api/tasks/abc123-def456/cancel" User-Agent:"Mozilla/5.0"
+xh POST "http://tdx.acdzh.com/api/tasks/abc123-def456/cancel" User-Agent:"Mozilla/5.0"
 ```
 
 ### Shell (curl)
 
 ```bash
-curl -X POST "http://tdx.acdzh.xyz/api/tasks/abc123-def456/cancel" \
+curl -X POST "http://tdx.acdzh.com/api/tasks/abc123-def456/cancel" \
   -H "User-Agent: Mozilla/5.0"
 ```
 

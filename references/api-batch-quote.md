@@ -161,7 +161,7 @@
 ```python
 import requests
 
-url = "http://tdx.acdzh.xyz/api/batch-quote"
+url = "http://tdx.acdzh.com/api/batch-quote"
 headers = {
     "User-Agent": "Mozilla/5.0",
     "Content-Type": "application/json"
@@ -187,13 +187,13 @@ if data["code"] == 0:
 ### Shell (xh)
 
 ```bash
-echo '{"codes":["000001","600519"]}' | xh POST "http://tdx.acdzh.xyz/api/batch-quote" User-Agent:"Mozilla/5.0" Content-Type:"application/json"
+echo '{"codes":["000001","600519"]}' | xh POST "http://tdx.acdzh.com/api/batch-quote" User-Agent:"Mozilla/5.0" Content-Type:"application/json"
 ```
 
 ### Shell (curl)
 
 ```bash
-curl -X POST "http://tdx.acdzh.xyz/api/batch-quote" \
+curl -X POST "http://tdx.acdzh.com/api/batch-quote" \
   -H "User-Agent: Mozilla/5.0" \
   -H "Content-Type: application/json" \
   -d '{"codes":["000001","600519"]}'
