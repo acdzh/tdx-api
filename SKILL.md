@@ -29,8 +29,8 @@ keywords: "tdx, tdx api, stock api, quote api, kline api, search api, stock-info
 
 ## 硬性约束
 
-- host 固定为 `tdx.acdzh.xyz`。
-- 若用户没有额外指定协议或端口，示例默认使用 `http://tdx.acdzh.xyz` 作为 base URL。
+- host 固定为 `tdx.acdzh.com`。
+- 若用户没有额外指定协议或端口，示例默认使用 `http://tdx.acdzh.com` 作为 base URL。
 - 命令行脚本或 Python 客户端访问业务接口时，建议显式携带 `User-Agent` 请求头；实测 `/api/search`、`/api/quote`、`/api/kline` 等接口在缺少常见浏览器式请求头时可能返回 `403`。
 - 不要把一次性抓数脚本写进仓库。
 - 如果需要写一次性的 Python 脚本，必须先生成 UUID，并把脚本写入系统临时目录，文件名使用该 UUID。
@@ -82,7 +82,7 @@ Python 示例模板：
 ```python
 import requests
 
-BASE_URL = "http://tdx.acdzh.xyz"
+BASE_URL = "http://tdx.acdzh.com"
 HEADERS = {"User-Agent": "Mozilla/5.0"}
 
 resp = requests.get(

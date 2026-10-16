@@ -34,8 +34,8 @@
 
 ## Base URL
 
-- 默认：`http://tdx.acdzh.xyz`
-- host 固定：`tdx.acdzh.xyz`
+- 默认：`http://tdx.acdzh.com`
+- host 固定：`tdx.acdzh.com`
 - 命令行脚本或 Python 客户端访问业务接口时，建议显式携带 `User-Agent` 请求头；实测部分接口在缺少常见浏览器式请求头时可能返回 `403`
 
 ## 统一响应
@@ -200,11 +200,11 @@
 ## 典型示例
 
 ```bash
-curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.xyz/api/quote?code=000001"
-curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.xyz/api/kline?code=000001&type=day"
-curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.xyz/api/minute?code=000001&date=20241103"
-curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.xyz/api/search?keyword=平安"
-curl -X POST "http://tdx.acdzh.xyz/api/batch-quote" \
+curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.com/api/quote?code=000001"
+curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.com/api/kline?code=000001&type=day"
+curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.com/api/minute?code=000001&date=20241103"
+curl -H "User-Agent: Mozilla/5.0" "http://tdx.acdzh.com/api/search?keyword=平安"
+curl -X POST "http://tdx.acdzh.com/api/batch-quote" \
   -H "User-Agent: Mozilla/5.0" \
   -H "Content-Type: application/json" \
   -d '{"codes":["000001","600519"]}'
